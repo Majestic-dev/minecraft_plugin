@@ -8,6 +8,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 
+import java.lang.Math;
+
 public class summon_entity implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
@@ -62,7 +64,7 @@ public class summon_entity implements CommandExecutor {
         }
 
 
-        player.sendMessage("Summoned " + count + entityType.getName() + "(s) at " + x_cur + " " + y_cur + " " + z_cur);
+        player.sendMessage("Summoned " + count + " " + entityType.getName() + "(s) at " + Math.round(x_cur) + " " + Math.round(y_cur) + " " + Math.round(z_cur));
         return true;
     }
 }
