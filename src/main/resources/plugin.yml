@@ -1,0 +1,10 @@
+name: meinkampf_plugin
+version: 0.0.1
+main: main
+commands:
+  kill_radius:
+    description: Kills given entities in given radius
+    usage: /<command> <entity> <radius>
+  summon_entity:
+    description: Summon given amount of given entities to where you're standing right now
+    usage: /<command> <entity> <count> <location>
