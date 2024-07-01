@@ -13,7 +13,7 @@ public class fishing_event implements Listener {
         Player player = event.getPlayer();
 
         if (event.getCaught() != null) {
-            player.sendMessage("You caught a " + ChatColor.YELLOW + ChatColor.BOLD + event.getCaught().getName());
+            player.sendMessage("You caught a " + ChatColor.GREEN + ChatColor.BOLD + event.getCaught().getName());
         }
     }
 }
