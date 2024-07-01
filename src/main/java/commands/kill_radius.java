@@ -1,5 +1,7 @@
 package commands;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -57,8 +59,9 @@ public class kill_radius implements CommandExecutor {
                 }
             }
         }
-
-        player.sendMessage("Killed " + killCount + " " + entityType.name().toLowerCase() + (killCount == 1 ? "" : "s") + " within a radius of " + radius + " blocks");
+        
+        player.sendMessage("Killed " + ChatColor.RED + killCount + " " + entityType.name().toLowerCase() + (killCount == 1 ? "" : "s") + " within a radius of " + radius + " blocks");
+        Bukkit.broadcastMessage(player.getName() + ChatColor.RED + ChatColor.BOLD + " KILLED " + ChatColor.WHITE + killCount + " " + entityType.name().toLowerCase() + (killCount == 1 ? "" : "s"));
         return true;
     }
 }
